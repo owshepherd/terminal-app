@@ -129,12 +129,21 @@ end
 #     return user_genres
 # end
 
+<<<<<<< HEAD
 # User.new(
 #     user_name =  @user_name,
 #     user_books = @user_books,
 #     user_authors = @user_authors,
 # 		user_genres = @user_genres
 # )
+=======
+User.new(
+    user_name =  @user_name,
+    user_books = @user_books,
+    user_authors = @user_authors,
+	user_genres = @user_genres
+)
+>>>>>>> 1f468d3fb5761b3cb856e4ecdd2fb5e0e9b77dd0
     
 # Parameters are as follows in this order: user_name, user_books, user_authors, user_genres)
 # # user_library = [
