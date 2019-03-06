@@ -88,16 +88,20 @@ User.new(
 )
     
 
-# user_library = [
-# user1 = User.new("Wade", 
-# ["Dracula", "Harry Potter", "Name of the Wind", "Dirt Music" ], 
-# ["Bram Stoker", "JK Rowling", "Patrick Rothfuss", "Tim Winton"], 
+
+# user1 = "Wade" 
+# ["Dracula", "Harry Potter and the Philospers Stone", "Name of the Wind", "Dirt Music" ], 
+# ["Bram Stoker", "J.K. Rowling", "Patrick Rothfuss", "Tim Winton"], 
 # ["Horror", "Science Fiction", "Fanatsy", "Australian"])
-# user2 = User.new("Owen", 
-# [], 
-# [], 
-# [])
-# ]
+# user2 = "JB" 
+# ["The Blade Itself", "The Art of War", "The Outsider", "The Hitchhikers Guide to The Galaxy"], 
+# ["Joe Abercrombie", "Sun Tzu", "Stephen King", "Douglas Adams"], 
+# ["Science Fiction", "Fiction", "Fantasy", "Epic Fantasy", "Mystery", "Thriller", "Classics", "Humour", "Nonfiction", "Philosophy", "History", "War", "Politics"])
+# user3  = "Karlee"
+# ["The Five People You Meet in Heaven", "The Perks of Being a Wallflower", "The Catcher in the Rye", "To Kill a Mockingbird", "Sharp Objects"]
+# ["Mitch Albom", "Stephen Chbosky", "J.D. Salinger", "Harper Lee", "Gillian Flynn"]
+# ["Inspirational", "Contemporary", "Fiction", "Fantasy", "Young Adult", "Literature", "Classics", "Historical Fiction", "Historical", "Mystery", "Thriller", "Crime"]
+
 
 def recommend (title, author, keyword)
 
