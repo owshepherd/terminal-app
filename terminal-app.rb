@@ -129,21 +129,21 @@ end
 #     return user_genres
 # end
 
-<<<<<<< HEAD
+
 # User.new(
 #     user_name =  @user_name,
 #     user_books = @user_books,
 #     user_authors = @user_authors,
 # 		user_genres = @user_genres
 # )
-=======
-User.new(
-    user_name =  @user_name,
-    user_books = @user_books,
-    user_authors = @user_authors,
-	user_genres = @user_genres
-)
->>>>>>> 1f468d3fb5761b3cb856e4ecdd2fb5e0e9b77dd0
+
+# User.new(
+#    user_name =  @user_name,
+#   user_books = @user_books,
+#    user_authors = @user_authors,
+#  	user_genres = @user_genres
+#)
+# 1f468d3fb5761b3cb856e4ecdd2fb5e0e9b77dd0
     
 # Parameters are as follows in this order: user_name, user_books, user_authors, user_genres)
 # # user_library = [
@@ -157,7 +157,20 @@ User.new(
 # # [])
 # # ]
 
+# user1 = "Wade" 
+# ["Dracula", "Harry Potter and the Philospers Stone", "Name of the Wind", "Dirt Music" ], 
+# ["Bram Stoker", "J.K. Rowling", "Patrick Rothfuss", "Tim Winton"], 
+# ["Horror", "Science Fiction", "Fanatsy", "Australian"])
+# user2 = "JB" 
+# ["The Blade Itself", "The Art of War", "The Outsider", "The Hitchhikers Guide to The Galaxy"], 
+# ["Joe Abercrombie", "Sun Tzu", "Stephen King", "Douglas Adams"], 
+# ["Science Fiction", "Fiction", "Fantasy", "Epic Fantasy", "Mystery", "Thriller", "Classics", "Humour", "Nonfiction", "Philosophy", "History", "War", "Politics"])
+# user3  = "Karlee"
+# ["The Five People You Meet in Heaven", "The Perks of Being a Wallflower", "The Catcher in the Rye", "To Kill a Mockingbird", "Sharp Objects"]
+# ["Mitch Albom", "Stephen Chbosky", "J.D. Salinger", "Harper Lee", "Gillian Flynn"]
+# ["Inspirational", "Contemporary", "Fiction", "Fantasy", "Young Adult", "Literature", "Classics", "Historical Fiction", "Historical", "Mystery", "Thriller", "Crime"]
+
+
 # def recommend (title, author, keyword)
-# >>>>>>> b8694e8e1aa883fedfd686536b4f1abc40310da4
 
 # end
