@@ -34,13 +34,13 @@ Book recommendations based on that title are then shown on the screen.
 
 ### Brainstorming
 TERMINAL APP IDEAS
--chatbot app
--football statistics app
--book chooser app
--eat seasonal app
--food miles app
--my budget app
--split bill app
+- chatbot app
+- football statistics app
+- book chooser app
+- eat seasonal app
+- food miles app
+- my budget app
+- split bill app
 
 We settled on the book chooser app
 
