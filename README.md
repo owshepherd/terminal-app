@@ -22,13 +22,15 @@ Book chooser App. This is a user focused book library with search and recmmendat
 ### Insructions for using App
 The user is promted to enter a book title to receive book recommendations based on the book title provided.
 ![](https://github.com/owshepherd/terminal-app/blob/master/terminal-app-screenshot-1.png)
+
 Once the user has entered their book title if no result is returned the user is asked to enter another book title.
 ![](https://github.com/owshepherd/terminal-app/blob/master/terminal-app-screen%20shot-2.png)
+
 Once the user has entered their book title and at least one matching result is returned then a numbered list will appear showing all matching title(s). The user is asked to the select (type and return) the number which corresponds to the book title they are searching for.
 ![](https://github.com/owshepherd/terminal-app/blob/master/terminal-app-screenshot-3.png)
+
 Book recommendations based on that title are then shown on the screen.
 ![](https://github.com/owshepherd/terminal-app/blob/master/terminal-app-screenshot-4.png)
-###Screenshots
 
 ### Brainstorming
 TERMINAL APP IDEAS
