@@ -17,6 +17,7 @@ class Author
 end
 
 class Book
+    attr_accessor :title
     def initialize (title) #maybe change to title
         @title = title
     end
@@ -38,29 +39,23 @@ author3 = Author.new ("Some Person")
 book5 = Book.new ("The Juror")
 author3.add_book(book5)
 
-book_array = [author1, author2, author3]
-
-# book_array = [book1, book2, book3, book4]
+author_array = [author1, author2, author3]
+book_array = [book1, book2, book3, book4, book5]
 
 search_term = gets.chomp
 
-# binding.pry
-
-# search_results = book_array.select { |i| i.search (search_term) }
-# puts search_results
-
-book_array.each do |i|
-    if i.name.include?(search_term)
-        puts i.name
-        i.books.each do |x|
-            puts x
-        end
+# Search functions for author and book
+author_array.each do |author|
+    if author.name.include?(search_term)
+        puts "#{author.name} (author)"
     end
 end
 
-# if book_array.include?(search_term)
-#     print "Butt"
-# end
+book_array.each do |book|
+    if book.title.include?(search_term)
+        puts "#{book.title} (book)"
+    end
+end
 
 # def recommend (title, author, keyword)
 # end
@@ -129,12 +124,27 @@ end
 #     return user_genres
 # end
 
+# <<<<<<< HEAD
+# <<<<<<< HEAD
+# =======
+# >>>>>>> my-work
 # User.new(
 #     user_name =  @user_name,
 #     user_books = @user_books,
 #     user_authors = @user_authors,
 # 		user_genres = @user_genres
 # )
+# <<<<<<< HEAD
+# =======
+# User.new(
+#     user_name =  @user_name,
+#     user_books = @user_books,
+#     user_authors = @user_authors,
+# 	user_genres = @user_genres
+# )
+# >>>>>>> 1f468d3fb5761b3cb856e4ecdd2fb5e0e9b77dd0
+# =======
+# >>>>>>> my-work
     
 # Parameters are as follows in this order: user_name, user_books, user_authors, user_genres)
 # # user_library = [
