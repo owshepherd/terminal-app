@@ -33,18 +33,26 @@ We settled on the book chooser app
 see: 
 ![](https://github.com/owshepherd/terminal-app/blob/master/terminal-app-planning-1.jpg)
 terminal-app-planning-1.jpeg
-
+![](https://github.com/owshepherd/terminal-app/blob/master/terminal-app-planning-2.jpg)
 terminal-app-planning-2.jpeg
+![](https://github.com/owshepherd/terminal-app/blob/master/terminal-app-planning-3.jpg)
 terminal-app-planning-3.jpeg
+![](https://github.com/owshepherd/terminal-app/blob/master/terminal-app-planning-4.jpg)
 terminal-app-planning-4.jpeg
 
 ### Project Plan & Method
 We used trello to lay out the plan.
 
-see: 
+see:
+![](https://github.com/owshepherd/terminal-app/blob/master/terminal-app-trello-1.jpg)
 terminal-app-trello-1
+![](https://github.com/owshepherd/terminal-app/blob/master/terminal-app-trello-2.jpg)
 terminal-app-trello-2
+![](https://github.com/owshepherd/terminal-app/blob/master/terminal-app-trello-3.jpg)
 terminal-app-trello-3
+![](https://github.com/owshepherd/terminal-app/blob/master/terminal-app-trello-4.jpg)
 terminal-app-trello-4
+![](https://github.com/owshepherd/terminal-app/blob/master/terminal-app-trello-5.jpg)
 terminal-app-trello-5
+![](https://github.com/owshepherd/terminal-app/blob/master/terminal-app-trello-6.jpg)
 terminal-app-trello-6
