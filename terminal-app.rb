@@ -6,8 +6,8 @@ class Author
         @name = name
         @books = []
     end
-
-    def add_book (book) # Asterisks is used to add multiple parameters
+  
+    def add_book (*book) # Asterisks is used to add multiple parameters
         @books << book
     end
 
@@ -17,146 +17,143 @@ class Author
 end
 
 class Book
-    def initialize (title) #maybe change to title
+    attr_accessor :title, :genres
+    def initialize (title)
         @title = title
+        @genres = []
+    end
+
+    def add_genre (*genre)
+        @genres << genre
     end
 end
+
+class Genre
+    attr_accessor :genre
+    def initialize (genre)
+        @genre = genre
+    end
+end
+
+class User
+    attr_accessor :name, :liked_books, :liked_authors, :liked_genres
+    def initialize (user_name)
+    	@name = user_name
+    	@liked_books = []
+    	@liked_authors = []
+    	@liked_genres = []
+    end
+
+    def add_book_to_likes (*book)
+        @liked_books << book
+    end
+
+    def add_author_to_likes (*author)
+        @liked_authors << author
+    end
+
+    def add_genre_to_likes (*genre)
+        @liked_genres << genre
+    end
+end
+
+classic = Genre.new ("Classic")
+contemporary = Genre.new ("Contemporary")
+crime = Genre.new ("Crime")
+fantasy = Genre.new ("Fantasy")
+horror = Genre.new ("Horror")
+mystery = Genre.new ("Mystery")
+sci_fi = Genre.new ("Science Fiction")
+thriller = Genre.new ("Thriller")
+young_adult = Genre.new ("Young Adult")
 
 author1 = Author.new ("Stephen King")
 book1 = Book.new ("Green Mile")
 book2 = Book.new ("Christine")
 book3 = Book.new ("The Shining")
-author1.add_book(book1)
-author1.add_book(book2)
-author1.add_book(book3)
+author1.add_book(book1, book2, book3)
+book1.add_genre(crime, fantasy)
+book2.add_genre(horror)
+book3.add_genre(horror, thriller)
 
 author2 = Author.new ("JRR Tolkein")
 book4 = Book.new ("The Hobbit")
 author2.add_book(book4)
+book4.add_genre(classic, fantasy)
 
 author3 = Author.new ("Some Person")
 book5 = Book.new ("The Juror")
 author3.add_book(book5)
+book5.add_genre(crime, mystery, contemporary)
 
-book_array = [author1, author2, author3]
-
-# book_array = [book1, book2, book3, book4]
+author_array = [author1, author2, author3]
+book_array = [book1, book2, book3, book4, book5]
 
 search_term = gets.chomp
 
-# binding.pry
-
-# search_results = book_array.select { |i| i.search (search_term) }
-# puts search_results
-
-book_array.each do |i|
-    if i.name.include?(search_term)
-        puts i.name
-        i.books.each do |x|
-            puts x
-        end
+# Search functions for author and book
+author_array.each do |author|
+    if author.name.include?(search_term)
+        puts "#{author.name} (author)"
     end
 end
 
-# if book_array.include?(search_term)
-#     print "Butt"
-# end
+book_array.each do |book|
+    if book.title.include?(search_term)
+        puts "#{book.title} (book) #{book.genres}"
+    end
+end
 
-# def recommend (title, author, keyword)
-# end
+# Wade's section
 
-# user = {
-#     user_name: name
-#     books_read_by_user: []
-#     authors_read_by_user: []
-#     user_likes_these_genres: []
-# }
-
-
-# class User
-#     attr_accessor :name, :books, :authors, :genres
-#     def initialize(user_name, user_books, user_authors, user_genres)
-#     	@name = user_name
-#     	@books = user_books
-#     	@authors = user_authors
-#     	@genres = user_genres
-#     end
-# end
-
-# def create_user_name ()
-#     puts "Enter a user name"
-#     user_name = gets.chomp
+def create_user_name ()
+    puts "Enter a user name"
+    user_name = gets.chomp
         
-#     return user_name
-# end
-
-# def user_book_input()
-#     new_book_input = ""
-#     user_books = []
+    return user_name
+end
+def user_book_input()
+    new_book_input = ""
+    user_books = []
     
-#     while new_book_input != "q"
-#         puts "Enter the Title of a book you have read or type 'q' to quit"
-#         user_book_input = gets.chomp
-#         user_books<<new_book_input
-#     end
-
-#     return user_books
-# end
-
-# def user_author_input()
-#     new_author_input = ""
-#     user_authors = []
+    while new_book_input != "q"
+        puts "Enter the Title of a book you have read or type 'q' to quit"
+        user_book_input = gets.chomp
+        user_books<<new_book_input
+    end
+    return user_books
+end
+def user_author_input()
+    new_author_input = ""
+    user_authors = []
     
-#     while new_author_input != "q"
-#         puts "Enter the name of an Author you have read or type 'q' to quit"
-#         user_author_input = gets.chomp
-#         user_authors<<new_author_input
-#     end    
+    while new_author_input != "q"
+        puts "Enter the name of an Author you have read or type 'q' to quit"
+        user_author_input = gets.chomp
+        user_authors<<new_author_input
+    end    
     
-#     return user_authors
-# end
-
-# def user_genre_input()
-#     new_genre_input = ""
-#     user_genres = []
+    return user_authors
+end
+def user_genre_input()
+    new_genre_input = ""
+    user_genres = []
     
-#     while user_genre_input != "q" 
-#         puts "Enter a Genre you enjoy reading or type 'q' to quit"
-#         user_genre_input = gets.chomp
-#         user_genres<<user_genre_input
-#     end
+    while user_genre_input != "q" 
+        puts "Enter a Genre you enjoy reading or type 'q' to quit"
+        user_genre_input = gets.chomp
+        user_genres<<user_genre_input
+    end
     
-#     return user_genres
-# end
-
-
-# User.new(
-#     user_name =  @user_name,
-#     user_books = @user_books,
-#     user_authors = @user_authors,
-# 		user_genres = @user_genres
-# )
-
-# User.new(
-#    user_name =  @user_name,
-#   user_books = @user_books,
-#    user_authors = @user_authors,
-#  	user_genres = @user_genres
-#)
-# 1f468d3fb5761b3cb856e4ecdd2fb5e0e9b77dd0
+    return user_genres
+end
+User.new(
+    user_name =  @user_name,
+    user_books = @user_books,
+    user_authors = @user_authors,
+    user_genres = @user_genres
+)
     
-# Parameters are as follows in this order: user_name, user_books, user_authors, user_genres)
-# # user_library = [
-# # user1 = User.new("Wade", 
-# # ["Dracula", "Harry Potter", "Name of the Wind", "Dirt Music" ], 
-# # ["Bram Stoker", "JK Rowling", "Patrick Rothfuss", "Tim Winton"], 
-# # ["Horror", "Science Fiction", "Fanatsy", "Australian"])
-# # user2 = User.new("Owen", 
-# # [], 
-# # [], 
-# # [])
-# # ]
-
 # user1 = "Wade" 
 # ["Dracula", "Harry Potter and the Philospers Stone", "Name of the Wind", "Dirt Music" ], 
 # ["Bram Stoker", "J.K. Rowling", "Patrick Rothfuss", "Tim Winton"], 
@@ -169,8 +166,9 @@ end
 # ["The Five People You Meet in Heaven", "The Perks of Being a Wallflower", "The Catcher in the Rye", "To Kill a Mockingbird", "Sharp Objects"]
 # ["Mitch Albom", "Stephen Chbosky", "J.D. Salinger", "Harper Lee", "Gillian Flynn"]
 # ["Inspirational", "Contemporary", "Fiction", "Fantasy", "Young Adult", "Literature", "Classics", "Historical Fiction", "Historical", "Mystery", "Thriller", "Crime"]
-
-
-# def recommend (title, author, keyword)
-
-# end
+def recommend (recommend_search)
+    recommend_array = []
+    if book_array.include?recommend_search
+when recommend_array.uniq.length == 3
+    return recommend_array
+end
