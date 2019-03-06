@@ -62,15 +62,15 @@ class User
     	@liked_genres = []
     end
 
-    def add_book_to_likes (*book)
+    def add_book_to_likes (book)
         @liked_books << book
     end
 
-    def add_author_to_likes (*author)
+    def add_author_to_likes (author)
         @liked_authors << author
     end
 
-    def add_genre_to_likes (*genre)
+    def add_genre_to_likes (genre)
         @liked_genres << genre
     end
 end
@@ -107,7 +107,32 @@ book5.add_genres([crime, mystery, contemporary])
 author_array = [author1, author2, author3]
 book_array = [book1, book2, book3, book4, book5]
 
-# search_term = gets.chomp
+
+search_term = ""
+
+book_selection_array = []
+
+while book_selection_array.any? == false
+    print "To receive a recommendation, please enter a book title: "
+    search_term = gets.chomp
+    book_array.each do |book|
+        if book.title.include?(search_term)
+            book_selection_array << book.title
+        end
+    end
+    if book_selection_array.length == 0
+        print "I don't understand. "
+    end
+end
+
+puts "Confirm your selection using the relevant number from the options below:"
+book_selection_array.each_with_index do |item, index|
+    puts ("#{index+1}. #{item}")
+end
+
+book_selection = gets.chomp.to_i
+
+search_term = book_selection_array[-book_selection]
 
 # Search functions for author and book
 # author_array.each do |author|
@@ -124,45 +149,53 @@ book_array = [book1, book2, book3, book4, book5]
 # End of author and book search functions
 
 # Search for book and produce recommendations based on genre
-# search_term = "Juror"
-# genre_search_array = []
 
-# book_array.each do |book|
-#      if book.title.include?(search_term)
-#          book.genres.each do |genres|
-#             genre_search_array << genres.genre
-#         end
-#     end
-# end
+genre_search_array = []
 
-# book_array.each do |book|
-#     book.genre_search(genre_search_array)
-# end
+100.times do
+    print "="
+end
+
+puts ()
+puts "Here are your book recommendations:"
+
+book_array.each do |book|
+     if book.title.include?(search_term)
+         book.genres.each do |genres|
+            genre_search_array << genres.genre
+        end
+    end
+end
+
+book_array.each do |book|
+    book.genre_search(genre_search_array)
+end
+
 # End of book and recommendation search
 
 # Wade's section
 
-# def create_user_name ()
-#     puts "Enter a user name"
+# def create_user (1,2,3,4)
+#     
 #     user_name = gets.chomp
         
 #     return user_name
 # end
-def user_book_input()
-    new_book_input = ""
-    user_books = []
+# def user_book_input()
+#     new_book_input = ""
+#     user_books = []
     
-    while new_book_input != "q"
-        puts "Enter the Title of a book you have read or type 'q' to quit"
-        user_book_input = gets.chomp
-        user_books<<new_book_input
-    end
-    return user_books
-end
+#     while new_book_input != "q"
+#         puts "Enter the Title of a book you have read or type 'q' to quit"
+#         user_book_input = gets.chomp
+#         user_books<<new_book_input
+#     end
+#     return user_books
+# end
 
 
-user_book_input
-
+# user_book_input
+# puts 
 
 # def user_author_input()
 #     new_author_input = ""
