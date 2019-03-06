@@ -108,6 +108,7 @@ author_array = [author1, author2, author3]
 book_array = [book1, book2, book3, book4, book5]
 
 
+# Start of book recommendation search
 search_term = ""
 
 book_selection_array = []
@@ -134,22 +135,6 @@ book_selection = gets.chomp.to_i
 
 search_term = book_selection_array[-book_selection]
 
-# Search functions for author and book
-# author_array.each do |author|
-#     if author.name.include?(search_term)
-#         puts "#{author.name} (author)"
-#     end
-# end
-                                                    # These can probably be combined into a single method
-# book_array.each do |book|
-#     if book.title.include?(search_term)
-#         puts "#{book.title} (book)"
-#     end
-# end
-# End of author and book search functions
-
-# Search for book and produce recommendations based on genre
-
 genre_search_array = []
 
 100.times do
@@ -170,8 +155,23 @@ end
 book_array.each do |book|
     book.genre_search(genre_search_array)
 end
-
 # End of book and recommendation search
+
+# Search functions for author and book
+# author_array.each do |author|
+#     if author.name.include?(search_term)
+#         puts "#{author.name} (author)"
+#     end
+# end
+                                                    # These can probably be combined into a single method
+# book_array.each do |book|
+#     if book.title.include?(search_term)
+#         puts "#{book.title} (book)"
+#     end
+# end
+# End of author and book search functions
+
+# Search for book and produce recommendations based on genre
 
 # Wade's section
 
