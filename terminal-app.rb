@@ -78,7 +78,7 @@ end
 
 book_array.each do |book|
     if book.title.include?(search_term)
-        puts "#{book.title} (book)"
+        puts "#{book.title} (book) #{book.genres}"
     end
 end
 
