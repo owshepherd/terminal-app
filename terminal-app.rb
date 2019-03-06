@@ -109,71 +109,36 @@ book_array = [book1, book2, book3, book4, book5]
 
 # search_term = gets.chomp
 
-# # Search functions for author and book
+# Search functions for author and book
 # author_array.each do |author|
 #     if author.name.include?(search_term)
 #         puts "#{author.name} (author)"
 #     end
 # end
-
+                                                    # These can probably be combined into a single method
 # book_array.each do |book|
 #     if book.title.include?(search_term)
 #         puts "#{book.title} (book)"
 #     end
 # end
+# End of author and book search functions
 
-search_term = "Juror"
-genre_search_array = []
-
-book_array.each do |book|
-     if book.title.include?(search_term)
-         book.genres.each do |genres|
-            genre_search_array << genres.genre
-        end
-    end
-end
-
-# Working recommendation match based on genre
-book_array.each do |book|
-    book.genre_search(genre_search_array)
-end
+# Search for book and produce recommendations based on genre
+# search_term = "Juror"
+# genre_search_array = []
 
 # book_array.each do |book|
-#     genre_search(genre_search_array)
-# end
-
-# book_array.each do |book|
-#     genre_search_array.each do |genre|
-#         if book.genre_search(genre)
-#             matching_genre_result << book
+#      if book.title.include?(search_term)
+#          book.genres.each do |genres|
+#             genre_search_array << genres.genre
 #         end
 #     end
 # end
 
-# Similar books generator
 # book_array.each do |book|
-#     if book.title.include?(search_term)
-#         book.genres.each do |genres|
-#            genre_search_array << genres.genre
-#        end
-#    end
+#     book.genre_search(genre_search_array)
 # end
-
-# book_array.each do |book|
-# if book.genres.include?("Contemporary")
-#     puts "Nope"
-# end
-# end
-
-
-# Searches genres in book array
-# book_array.each do |i| 
-#     i.genres.each do |x|
-#         if x.genre.include?("Contemporary")
-#         puts x.title
-#         end
-#     end
-# end
+# End of book and recommendation search
 
 # Wade's section
 
@@ -183,17 +148,22 @@ end
         
 #     return user_name
 # end
-# def user_book_input()
-#     new_book_input = ""
-#     user_books = []
+def user_book_input()
+    new_book_input = ""
+    user_books = []
     
-#     while new_book_input != "q"
-#         puts "Enter the Title of a book you have read or type 'q' to quit"
-#         user_book_input = gets.chomp
-#         user_books<<new_book_input
-#     end
-#     return user_books
-# end
+    while new_book_input != "q"
+        puts "Enter the Title of a book you have read or type 'q' to quit"
+        user_book_input = gets.chomp
+        user_books<<new_book_input
+    end
+    return user_books
+end
+
+
+user_book_input
+
+
 # def user_author_input()
 #     new_author_input = ""
 #     user_authors = []
