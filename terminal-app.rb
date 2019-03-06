@@ -7,7 +7,7 @@ class Author
         @books = []
     end
 
-    def add_book (book) # Asterisks is used to add multiple parameters
+    def add_book (*book) # Asterisks is used to add multiple parameters
         @books << book
     end
 
@@ -18,26 +18,51 @@ end
 
 class Book
     attr_accessor :title
-    def initialize (title) #maybe change to title
+    def initialize (title)
         @title = title
+        @genres = []
+    end
+
+    def add_genre (*genre)
+        @genres << genre
     end
 end
+
+class Genre
+    attr_accessor :genre
+    def initialize (genre)
+        @genre = genre
+    end
+end
+
+classic = Genre.new("Classic")
+contemporary = Genre.new("Contemporary")
+crime = Genre.new("Crime")
+fantasy = Genre.new("Fantasy")
+horror = Genre.new("Horror")
+mystery = Genre.new("Mystery")
+sci_fi = Genre.new("Science Fiction")
+thriller = Genre.new("Thriller")
+young_adult = Genre.new("Young Adult")
 
 author1 = Author.new ("Stephen King")
 book1 = Book.new ("Green Mile")
 book2 = Book.new ("Christine")
 book3 = Book.new ("The Shining")
-author1.add_book(book1)
-author1.add_book(book2)
-author1.add_book(book3)
+author1.add_book(book1, book2, book3)
+book1.add_genre(crime, fantasy)
+book2.add_genre(horror)
+book3.add_genre(horror, thriller)
 
 author2 = Author.new ("JRR Tolkein")
 book4 = Book.new ("The Hobbit")
 author2.add_book(book4)
+book4.add_genre(classic, fantasy)
 
 author3 = Author.new ("Some Person")
 book5 = Book.new ("The Juror")
 author3.add_book(book5)
+book5.add_genre(crime, mystery, contemporary)
 
 author_array = [author1, author2, author3]
 book_array = [book1, book2, book3, book4, book5]
