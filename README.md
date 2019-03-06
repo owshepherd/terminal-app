@@ -31,7 +31,9 @@ TERMINAL APP IDEAS
 We settled on the book chooser app
 
 see: 
+![](https://github.com/owshepherd/terminal-app/blob/master/terminal-app-planning-1.jpg)
 terminal-app-planning-1.jpeg
+
 terminal-app-planning-2.jpeg
 terminal-app-planning-3.jpeg
 terminal-app-planning-4.jpeg
