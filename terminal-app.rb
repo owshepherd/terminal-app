@@ -6,7 +6,7 @@ class Author
         @name = name
         @books = []
     end
-
+  
     def add_book (*book) # Asterisks is used to add multiple parameters
         @books << book
     end
@@ -104,15 +104,7 @@ book_array.each do |book|
     end
 end
 
-def recommend (title, author, keyword)
-end
-
-user = {
-    user_name: name
-    books_read_by_user: []
-    authors_read_by_user: []
-    user_likes_these_genres: []
-}
+# Wade's section
 
 def create_user_name ()
     puts "Enter a user name"
@@ -120,7 +112,6 @@ def create_user_name ()
         
     return user_name
 end
-
 def user_book_input()
     new_book_input = ""
     user_books = []
@@ -130,10 +121,8 @@ def user_book_input()
         user_book_input = gets.chomp
         user_books<<new_book_input
     end
-
     return user_books
 end
-
 def user_author_input()
     new_author_input = ""
     user_authors = []
@@ -146,7 +135,6 @@ def user_author_input()
     
     return user_authors
 end
-
 def user_genre_input()
     new_genre_input = ""
     user_genres = []
@@ -159,27 +147,28 @@ def user_genre_input()
     
     return user_genres
 end
-
-# User.new(
-#     user_name =  @user_name,
-#     user_books = @user_books,
-#     user_authors = @user_authors,
-# 	user_genres = @user_genres
-# )
+User.new(
+    user_name =  @user_name,
+    user_books = @user_books,
+    user_authors = @user_authors,
+    user_genres = @user_genres
+)
     
-# Parameters are as follows in this order: user_name, user_books, user_authors, user_genres)
-user1 = User.new("Wade", 
-["Dracula", "Harry Potter", "Name of the Wind", "Dirt Music" ], 
-["Bram Stoker", "JK Rowling", "Patrick Rothfuss", "Tim Winton"], 
-["Horror", "Science Fiction", "Fanatsy", "Australian"])
-user2 = User.new("Owen", 
-[], 
-[], 
-[])
-]
-
-user_library = [user1, user2]
-
-def recommend (title, author, keyword)
-
+# user1 = "Wade" 
+# ["Dracula", "Harry Potter and the Philospers Stone", "Name of the Wind", "Dirt Music" ], 
+# ["Bram Stoker", "J.K. Rowling", "Patrick Rothfuss", "Tim Winton"], 
+# ["Horror", "Science Fiction", "Fanatsy", "Australian"])
+# user2 = "JB" 
+# ["The Blade Itself", "The Art of War", "The Outsider", "The Hitchhikers Guide to The Galaxy"], 
+# ["Joe Abercrombie", "Sun Tzu", "Stephen King", "Douglas Adams"], 
+# ["Science Fiction", "Fiction", "Fantasy", "Epic Fantasy", "Mystery", "Thriller", "Classics", "Humour", "Nonfiction", "Philosophy", "History", "War", "Politics"])
+# user3  = "Karlee"
+# ["The Five People You Meet in Heaven", "The Perks of Being a Wallflower", "The Catcher in the Rye", "To Kill a Mockingbird", "Sharp Objects"]
+# ["Mitch Albom", "Stephen Chbosky", "J.D. Salinger", "Harper Lee", "Gillian Flynn"]
+# ["Inspirational", "Contemporary", "Fiction", "Fantasy", "Young Adult", "Literature", "Classics", "Historical Fiction", "Historical", "Mystery", "Thriller", "Crime"]
+def recommend (recommend_search)
+    recommend_array = []
+    if book_array.include?recommend_search
+when recommend_array.uniq.length == 3
+    return recommend_array
 end
