@@ -1,27 +1,27 @@
-# class Book
-#     attr_accessor :title, :author
-#     def initialize(title, author)
-#         @title = title
-#         @author = author
-#     end
+class Book
+    attr_accessor :title, :author
+    def initialize(title, author)
+        @title = title
+        @author = author
+    end
 
-#     def book_search (search_term)
-#         if @title.include?(search_term) || @author.include?(search_term)
-#             return "#{@title} by #{@author}"
-#         end
-#     end
-# end
+    def book_search (search_term)
+        if @title.include?(search_term) || @author.include?(search_term)
+            return "#{@title} by #{@author}"
+        end
+    end
+end
 
-# book_library = [
-# book1 = Book.new("Harry Potter", "JK Rowling"),
-# book2 = Book.new("The Green Mile", "Stephen King"),
-# book3 = Book.new("Dracula", "Bram Stoker")
-# ]
+book_library = [
+book1 = Book.new("Harry Potter", "JK Rowling"),
+book2 = Book.new("The Green Mile", "Stephen King"),
+book3 = Book.new("Dracula", "Bram Stoker")
+]
 
-# # book3.book_search("Dracula")
+# book3.book_search("Dracula")
 
-# search_term = gets.chomp
-# book_library.select { |array| array.book_search(search_term) == true }
+search_term = gets.chomp
+book_library.select { |array| array.book_search(search_term) == true }
 
 
 class User
@@ -102,10 +102,5 @@ User.new(
 # ["Mitch Albom", "Stephen Chbosky", "J.D. Salinger", "Harper Lee", "Gillian Flynn"]
 # ["Inspirational", "Contemporary", "Fiction", "Fantasy", "Young Adult", "Literature", "Classics", "Historical Fiction", "Historical", "Mystery", "Thriller", "Crime"]
 
-
-def recommend (recommend_search)
-	recommend_array = []
-	if book_array.include?recommend_search
-when recommend_array.uniq.length == 3
-    return recommend_array
-end
+end	
+p recommend_array
