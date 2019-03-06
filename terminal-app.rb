@@ -103,6 +103,9 @@ User.new(
 # ["Inspirational", "Contemporary", "Fiction", "Fantasy", "Young Adult", "Literature", "Classics", "Historical Fiction", "Historical", "Mystery", "Thriller", "Crime"]
 
 
-def recommend (title, author, keyword)
-
+def recommend (recommend_search)
+	recommend_array = []
+	if book_array.include?recommend_search
+when recommend_array.uniq.length == 3
+    return recommend_array
 end
