@@ -18,7 +18,8 @@ Presently, the application begins by prompting the user to enter a book title. T
 The user is prompted by the application to select one of the numbers shown on screen. Once the book has been selected, the genres which are associated with that book are pulled into a new array called, "genre_search_array". The values within the "genre_search_array" are then used as a search term in conjunction with the "genre_search" method found within the Book class.
 From here, each book within the "book_array" which shares a genre withh one of the genres found within the "genre_search_array" are printed to screen as a recommendation to the user for future reading.
 Presently, the recommendations printed to screen also included the book initially used to produce these recommendations (for example, searching for "The Hobbit" will display books which share genres with The Hobbit but will also list The Hobbit itself as a recommendation). Again, we as a group believe this could be easily addressed with additional time. However, we feel that this does not adversely impact the user experience and that users will dismiss this as a minor error.
-###Insructions for using App
+
+### Insructions for using App
 The user is promted to enter a book title to receive book recommendations based on the book title provided.
 ![](https://github.com/owshepherd/terminal-app/blob/master/terminal-app-screenshot-1.png)
 Once the user has entered their book title if no result is returned the user is asked to enter another book title.
