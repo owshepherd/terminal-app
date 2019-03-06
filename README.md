@@ -20,13 +20,13 @@ From here, each book within the "book_array" which shares a genre withh one of t
 Presently, the recommendations printed to screen also included the book initially used to produce these recommendations (for example, searching for "The Hobbit" will display books which share genres with The Hobbit but will also list The Hobbit itself as a recommendation). Again, we as a group believe this could be easily addressed with additional time. However, we feel that this does not adversely impact the user experience and that users will dismiss this as a minor error.
 ###Insructions for using App
 The user is promted to enter a book title to receive book recommendations based on the book title provided.
-![]()
+![](https://github.com/owshepherd/terminal-app/blob/master/terminal-app-screenshot-1.png)
 Once the user has entered their book title if no result is returned the user is asked to enter another book title.
-![]()
+![](https://github.com/owshepherd/terminal-app/blob/master/terminal-app-screen%20shot-2.png)
 Once the user has entered their book title and at least one matching result is returned then a numbered list will appear showing all matching title. The user is asked to the select (type and return) the number which corresponds to the book title they entered.
-![]()
+![](https://github.com/owshepherd/terminal-app/blob/master/terminal-app-screenshot-3.png)
 Book recommendations based on that title are then shown on the screen.
-![]()
+![](https://github.com/owshepherd/terminal-app/blob/master/terminal-app-screenshot-4.png)
 ###Screenshots
 
 ### Brainstorming
